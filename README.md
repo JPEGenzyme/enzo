@@ -24,8 +24,8 @@ This is a .NET 9 API application using the AdventureWorks database. The API prov
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/adventureworks-api.git
-cd adventureworks-api
+git clone https://github.com/JPEGenzyme/enzo.git
+cd enzo
 ```
 
 ### 2. Set Up the Environment
