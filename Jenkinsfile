@@ -4,14 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          sh('dotnet build')
+          bat 'dotnet build'
         }
       }
     }
     stage('Deploy to Staging') {
       steps {
         script {
-          sh('docker-compose up --build -d')
+          bat 'docker-compose up --build -d'
         }
       }
     }
