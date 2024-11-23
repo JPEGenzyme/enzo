@@ -36,27 +36,4 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<AdventureWorksLt2022Context>();
-    var productsController = new ProductsController(context);
-    
-    // Fetch and log products
-    var products = await productsController.GetProducts();
-    
-    if (products.Value != null)
-    {
-        Console.WriteLine("Products table contents:");
-        foreach (var product in products.Value)
-        {
-            Console.WriteLine($"ID: {product.ProductId}, Name: {product.Name}");
-        }
-    }
-    else
-    {
-        Console.WriteLine("No products found.");
-    }
-}
-
-
 app.Run();
